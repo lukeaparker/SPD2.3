@@ -114,9 +114,10 @@ class StatisticsDisplay(Observer):
         for measurment in measurements:
             if measurment < m_min:
                 m_min = measurment
-            if measurment > m_max:
+            elif measurment > m_max:
                 m_max = measurment
-        stat = (m_min, sum(measurements) / len(measurements), m_max)
+        stat = (m_min, sum(measurements) / \
+            len(measurements), m_max)
 
     def update(self, temp, humidity, pressure):
         self.temps.append(temp)
@@ -148,12 +149,14 @@ class StatisticsDisplay(Observer):
 
 
 class ForecastDisplay(Observer):
+    """
+    The ForecastDisplay class shows the weather forcast based on the current
+    temperature, humidity and pressure. Use the following formuals :
+    forcast_temp = temperature + 0.11 * humidity + 0.2 * pressure
+    forcast_humadity = humidity - 0.9 * humidity
+    forcast_pressure = pressure + 0.1 * temperature - 0.21 * pressure
+    """
 
-    # The ForecastDisplay class shows the weather forcast based on the current
-    # temperature, humidity and pressure. Use the following formuals :
-    # forcast_temp = temperature + 0.11 * humidity + 0.2 * pressure
-    # forcast_humadity = humidity - 0.9 * humidity
-    # forcast_pressure = pressure + 0.1 * temperature - 0.21 * pressure
     forecast_temp = 0
     forecast_humidity = 0
     forecast_pressure = 0

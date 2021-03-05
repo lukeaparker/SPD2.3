@@ -1,6 +1,7 @@
 # by Kami Bigdely
 # Extract Class
 
+
 class Food:
     def __init__(
         self, name, prep_time, vegitarian, food_type, cuisine, ingredients, preparation

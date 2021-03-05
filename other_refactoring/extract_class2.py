@@ -14,7 +14,8 @@ class Cook:
 
     def is_well_done(self):
         return (
-            self.get_cooking_progress(self.time, self.temperature, self.pressure)
+            self.get_cooking_progress(self.time, \
+                self.temperature, self.pressure)
             >= self.WELL_DONE
         )
 

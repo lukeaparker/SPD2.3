@@ -10,7 +10,6 @@ def make_alert_sound():
 def make_accept_sound():
     print("made acceptance sound")
 
-
 ingredients = ["sodium benzoate"]
 
 if (

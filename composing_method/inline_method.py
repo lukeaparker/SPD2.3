@@ -18,6 +18,4 @@ def older_than_18_year_old(age):
 
     if age > legal_drinking_age:
         return True
-
-    else:
-        return False
+    return False
