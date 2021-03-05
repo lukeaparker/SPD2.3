@@ -21,4 +21,3 @@ def older_than_18_year_old(age):
 
     else:
         return False
-

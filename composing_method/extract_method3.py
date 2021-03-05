@@ -25,7 +25,7 @@ def calculate(xc1, yc1, xc2, yc2):
     xb = 0.34
     yb = 0.91
 
-    # calcualte the length of vector AB vector 
+    # calcualte the length of vector AB vector
     # which is a vector between A and B points.
     length = math.sqrt((xa - xb) * (xa - xb) + (ya - yb) * (ya - yb))
     print("length", length)
